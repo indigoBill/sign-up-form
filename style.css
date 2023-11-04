@@ -1,0 +1,62 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.left-section {
+    flex-grow: 1;
+    width: 35%;
+    min-width: 300px;
+    background: no-repeat 0%/cover url("assets/annie-spratt-WBpr_yH0Frg-unsplash.jpg");
+    position: relative;
+}
+
+.right-section {
+    flex-grow: 1;
+    width: calc(100vw - 35%);
+    background-color: rgb(238, 220, 204);
+    min-height: 60%;
+}
+
+.pic-credit {
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 15px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+.pic-credit a {
+    text-decoration: underline;
+    color: white;
+}
+
+.logo-container {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 10vh;
+}
+
+.logo {
+    align-self: center;
+    width: 50%;
+}
