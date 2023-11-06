@@ -69,24 +69,27 @@ body {
 
 fieldset {
     display: flex;
-    flex-direction: column;
-    min-width: 300px;
+    flex-wrap: wrap;
     border: none;
-    gap: 40px;
     padding: 0;
     margin: 0;
+    gap: 10px;
 }
 
 fieldset div {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    min-width: 300px;
+}
+
+fieldset div:first-child {
+    margin-right: 70px;
 }
 
 form {
     display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .form-container {
@@ -112,7 +115,7 @@ h2 {
 input {
     appearance: none;
     height: 30px;
-    border: 1px solid rgb(90, 89, 89);
+    border: 1px solid rgb(151, 150, 150);
     border-radius: 5px;
 }
 
@@ -124,5 +127,37 @@ input:focus {
 
 label {
     font-size: .9rem;
-
+    margin-bottom: 5px;
 }
+
+input:focus:invalid {
+    border: 1px solid rgb(235, 27, 27);
+}
+
+input:focus:invalid:not(#confirm_pass) + span::before {
+    content: "*REQUIRED";
+}
+
+input:focus:invalid + span,
+.match-error {
+    font-size: .7rem;
+    color: rgb(235, 27, 27);
+}
+
+span {
+    min-height: 20px;
+    margin-top: 5px;
+}
+
+input[type="email"]:focus:invalid + span::before {
+    content: "*REQUIRED: EXAMPLE@MAIL.COM";
+}
+
+input[type="tel"]:focus:invalid + span::before {
+    content: "*REQUIRED: XXX-XXX-XXXX";
+}
+
+input[name="password"]:focus:invalid + span::before {
+    content: "*REQUIRED: MINIMUM LENGTH OF 8 CHARACTERS";
+}
+
