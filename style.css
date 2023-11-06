@@ -28,8 +28,14 @@ body {
 .right-section {
     flex-grow: 1;
     width: calc(100vw - 35%);
-    background-color: rgb(238, 220, 204);
+    background-color: rgb(238, 237, 237);
     min-height: 60%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding-bottom: 50px;
 }
 
 .pic-credit {
@@ -53,7 +59,7 @@ body {
     display: flex;
     justify-content: center;
     padding: 20px;
-    margin-top: 12vw;
+    margin: 12vw 0;
 }
 
 .logo {
@@ -66,26 +72,57 @@ fieldset {
     flex-direction: column;
     min-width: 300px;
     border: none;
-    gap: 20px;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
 }
 
 fieldset div {
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 
 form {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 50px;
 }
 
 .form-container {
-    background-color: rgb(245, 233, 222);
-    padding: 20px;
+    background-color: rgb(252, 251, 251);
+    padding: 30px 0 30px 50px;
+    box-shadow: 5px 7px 10px rgb(182, 181, 181);
+}
+
+.form-container h2 {
+    margin: 0 0 20px 0;
 }
 
 .main-text {
-    max-width: 750px;
+    max-width: 800px;
+    padding: 0 0 0 50px;
+    line-height: 2rem;
 }
 
+h2 {
+    font-weight: 500;
+}
+
+input {
+    appearance: none;
+    height: 30px;
+    border: 1px solid rgb(90, 89, 89);
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid rgb(27, 124, 235);
+    box-shadow: 5px 3px 6px rgb(182, 181, 181);
+}
+
+label {
+    font-size: .9rem;
+
+}
