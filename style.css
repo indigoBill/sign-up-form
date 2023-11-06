@@ -53,10 +53,39 @@ body {
     display: flex;
     justify-content: center;
     padding: 20px;
-    margin-top: 10vh;
+    margin-top: 12vw;
 }
 
 .logo {
     align-self: center;
     width: 50%;
 }
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    border: none;
+    gap: 20px;
+}
+
+fieldset div {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.form-container {
+    background-color: rgb(245, 233, 222);
+    padding: 20px;
+}
+
+.main-text {
+    max-width: 750px;
+}
+
